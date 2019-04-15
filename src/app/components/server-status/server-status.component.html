@@ -1,0 +1,20 @@
+<input type="button"
+       class="btn btn-primary"
+       value="Get Server Status"
+       (click)="getData()">
+<!-- <div class="alert alert-success">
+  This is going to call api 2 times
+<p>Message {{ (status$ | async)?.message }}
+</p>
+<p>At {{ (status$ | async)?.at }}
+</p>
+
+ to get data in only one call
+<p>Message {{ status.message }}
+  </p>
+  <p>At {{ status.at }}
+  </p>
+
+</div> -->
+
+<app-server-status-display [status]="status$ | async"></app-server-status-display>
